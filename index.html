@@ -11,19 +11,18 @@
       height: 100vh;
       overflow: hidden;
       background: #ffffff;
-      position: relative;
     }
     .dog {
-      position: absolute;
-      bottom: 0;
-      left: -300px;
-      width: 250px;
+      position: fixed;
+      bottom: 10px;
+      width: 220px;
       height: auto;
-      animation: moveRight 6s linear infinite;
+      will-change: transform;
+      animation: moveRight 7s linear infinite;
     }
     @keyframes moveRight {
-      0%   { left: -300px; }
-      100% { left: 100vw; }
+      0%   { transform: translateX(-280px); }
+      100% { transform: translateX(calc(100vw + 50px)); }
     }
   </style>
 </head>
